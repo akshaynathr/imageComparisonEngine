@@ -1,5 +1,6 @@
 //function to populate the canvas with images
 //
+var resemblecontrol;
 function setCanvas(CanvasName,url){
 	var c=document.getElementById(CanvasName);
 	var ctx=c.getContext("2d");
@@ -23,7 +24,10 @@ function imageprocess(img) {
 function process(){
 	var message="Images are ";
 	var end=" % similar";
-	resemble(document.getElementById('url1').value).compareTo(document.getElementById('url2').value).onComplete(function(data) {console.log(data);
+				
+	 resemblecontrol=resemble(document.getElementById('url1').value).compareTo(document.getElementById('url2').value).onComplete(function(data) {console.log(data);
+	// resemblecontrol.ignoreAntialiasing();
+	//resemblecontrol.repaint();
 		var similar=100-data.misMatchPercentage;
 		alert(message+similar+end);});
  }
