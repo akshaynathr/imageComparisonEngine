@@ -4,7 +4,6 @@
 
 	<head>
 		<title>Image compare Engine</title>
-       <script src="imgprocess.js"> </script>
 
 	</head>
 
@@ -13,20 +12,28 @@
        <canvas id="image1" width="300" height="250" style="border:1px dotted #000;">
        </canvas>
 <br>
-<button id="click" onclick="setCanvas('image1')"> Set Canvas 1</button>
+<input type="input" id="url1" > </input>
+<button id="click" onclick="setCanvas('image1','url1')"> Set Canvas 1</button>
 
 <br>
   <canvas id="image2" width="300" height="250" style="border:1px dotted #000;">
        </canvas>
        <br>
-<button id="click" onclick="setCanvas('image2')"> Set Canvas2</button>
+<input type="input" id="url2"> </input>
+<button id="click" onclick="setCanvas('image2','url2')"> Set Canvas2</button>
 <br>
 
 
    <canvas id="image3" width="300" height="250" style="border:1px dotted #000;">
        </canvas>
+       <button id="imgprocess" onclick="process()">Image process</button>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+                <script src="resemble.js"></script>
+	
+       <script src="imgprocess.js"> </script>
+		<br>
 
-		</div>
+	</div>
 	</body>
 </html>
 
